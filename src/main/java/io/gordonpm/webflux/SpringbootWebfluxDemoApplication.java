@@ -1,4 +1,4 @@
-package com.cycleman.webflux;
+package io.gordonpm.webflux;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

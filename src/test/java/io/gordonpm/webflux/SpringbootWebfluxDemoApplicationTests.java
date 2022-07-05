@@ -1,4 +1,4 @@
-package com.cycleman.webflux;
+package io.gordonpm.webflux;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

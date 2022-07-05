@@ -1,7 +1,7 @@
-package com.cycleman.webflux.controller;
+package io.gordonpm.webflux.controller;
 
-import com.cycleman.webflux.dto.Customer;
-import com.cycleman.webflux.service.CustomerService;
+import io.gordonpm.webflux.dto.Customer;
+import io.gordonpm.webflux.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

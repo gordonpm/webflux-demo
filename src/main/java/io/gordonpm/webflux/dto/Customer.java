@@ -1,4 +1,4 @@
-package com.cycleman.webflux.dto;
+package io.gordonpm.webflux.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

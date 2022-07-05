@@ -1,7 +1,7 @@
-package com.cycleman.webflux.service;
+package io.gordonpm.webflux.service;
 
-import com.cycleman.webflux.dao.CustomerDao;
-import com.cycleman.webflux.dto.Customer;
+import io.gordonpm.webflux.dao.CustomerDao;
+import io.gordonpm.webflux.dto.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

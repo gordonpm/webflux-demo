@@ -1,6 +1,6 @@
-package com.cycleman.webflux.dao;
+package io.gordonpm.webflux.dao;
 
-import com.cycleman.webflux.dto.Customer;
+import io.gordonpm.webflux.dto.Customer;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
