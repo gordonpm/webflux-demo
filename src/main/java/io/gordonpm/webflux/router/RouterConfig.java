@@ -1,6 +1,7 @@
 package io.gordonpm.webflux.router;
 
 import io.gordonpm.webflux.handler.CustomerHandler;
+import io.gordonpm.webflux.handler.CustomerStreamHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,10 +15,14 @@ public class RouterConfig {
     @Autowired
     private CustomerHandler customerHandler;
 
+    @Autowired
+    private CustomerStreamHandler customerStreamHandler;
+
     @Bean
     public RouterFunction<ServerResponse> routerFunction() {
         return RouterFunctions.route()
                 .GET("/router/customers", customerHandler::loadCustomers)
+                .GET("/router/customers/stream", customerStreamHandler::getCustomers)
                 .build();
     }
 }
