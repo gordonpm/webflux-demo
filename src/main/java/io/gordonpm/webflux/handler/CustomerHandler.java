@@ -19,4 +19,10 @@ public class CustomerHandler {
         Flux<Customer> customerList = customerDao.getCustomerList();
         return ServerResponse.ok().body(customerList, Customer.class);
     }
+
+    public Mono<ServerResponse> findCustomer(ServerRequest request) {
+        int customerId = Integer.parseInt(request.pathVariable("input"));
+        Mono<Customer> customerMono = customerDao.getCustomerList().filter(c -> c.getId() == customerId).next();
+        return ServerResponse.ok().body(customerMono, Customer.class);
+    }
 }
