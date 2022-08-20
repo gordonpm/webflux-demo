@@ -25,4 +25,10 @@ public class CustomerHandler {
         Mono<Customer> customerMono = customerDao.getCustomerList().filter(c -> c.getId() == customerId).next();
         return ServerResponse.ok().body(customerMono, Customer.class);
     }
+
+    public Mono<ServerResponse> saveCustomer(ServerRequest request) {
+        Mono<Customer> customerMono = request.bodyToMono(Customer.class);
+        Mono<String> saveResponse = customerMono.map(dto -> dto.getId() + " : " + dto.getName());
+        return ServerResponse.ok().body(saveResponse, String.class);
+    }
 }
